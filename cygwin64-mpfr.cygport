@@ -1,0 +1,24 @@
+CROSS_HOST="x86_64-pc-cygwin"
+inherit cross
+
+NAME="cygwin64-mpfr"
+VERSION=3.1.1
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="MPFR for Cygwin 64bit toolchain"
+DESCRIPTION="The main goal of MPFR is to provide a library for multiple-
+precision floating-point computation which is both efficient and has a
+well-defined semantics. It copies the good ideas from the ANSI/IEEE-754
+standard for double-precision floating-point arithmetic (53-bit significand)."
+HOMEPAGE="http://www.mpfr.org/"
+SRC_URI="http://www.mpfr.org/mpfr-current/mpfr-${VERSION}.tar.xz"
+SRC_DIR="mpfr-${VERSION}"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	rm -fr ${D}${CROSS_DATADIR}/info/
+}
+
+KEEP_LA_FILES="none"
