@@ -3,7 +3,7 @@ inherit cross
 
 NAME="cygwin64-mpfr"
 VERSION=3.1.1
-RELEASE=1
+RELEASE=2
 CATEGORY="Devel"
 SUMMARY="MPFR for Cygwin 64bit toolchain"
 DESCRIPTION="The main goal of MPFR is to provide a library for multiple-
